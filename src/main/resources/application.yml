@@ -1,0 +1,14 @@
+# 开发环境配置
+server:
+  # 服务器的HTTP端口,星舰默认为8090
+  port: 8099
+
+# Spring配置
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: 'dev,aborn'
+    default: 'dev'

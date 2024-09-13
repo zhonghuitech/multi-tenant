@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhonghuitech.multitenant.mapper.UserMapper">
+
+    <select id="myCount" resultType="java.lang.Integer">
+        select count(1) from sys_user
+    </select>
+
+    <select id="getAddrAndUser" resultType="com.zhonghuitech.multitenant.entity.User">
+        select a.addr, u.user_id, u.user_name, u.tenant_id
+        from sys_user u
+        left join user_addr a on u.user_id=a.user_id
+        <where>
+            <if test="userName!=null">
+                a.user_name like concat(concat('%',#{userName}),'%')
+            </if>
+        </where>
+    </select>
+</mapper>
