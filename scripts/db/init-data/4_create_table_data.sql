@@ -16,7 +16,8 @@ CREATE TABLE `sys_user`
 INSERT INTO `sys_user` (user_id, user_name, tenant_id)
 values (1, 'admin', 'default'),
        (2, 'zhonghui', 'zhc'),
-       (3, 'aborn', 'zhc');
+       (3, 'ceshi', 'zhc'),
+       (4, 'aborn', 'zhc');
 
 drop table if exists `user_addr`;
 CREATE TABLE `user_addr`
