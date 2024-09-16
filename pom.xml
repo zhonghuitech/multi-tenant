@@ -12,7 +12,7 @@
     <artifactId>multi-tenant</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>multi-tenant</name>
-    <description>multi-tenant</description>
+    <description>multi tenant springboot3 druid example.</description>
     <url/>
     <licenses>
         <license/>
