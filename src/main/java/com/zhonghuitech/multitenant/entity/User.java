@@ -20,13 +20,13 @@ import lombok.experimental.Accessors;
 public class User {
     @TableId
     private Long userId;
+
+    private String userName;
+
     /**
      * 租户 ID
      */
     private String tenantId;
-    private String userName;
-
-    private String nickName;
 
     /**
      * 在 user_addr 里的字段

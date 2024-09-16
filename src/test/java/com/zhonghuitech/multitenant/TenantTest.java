@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
@@ -21,6 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @date 2024/09/13 11:03
  */
 @SpringBootTest
+@ActiveProfiles("dev")
 public class TenantTest {
     @Autowired
     private UserMapper mapper;
