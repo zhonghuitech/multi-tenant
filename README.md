@@ -1,5 +1,7 @@
 # multi-tenant
-springboot 3 + druid + mybatisplus 多租户实现
+[![Java CI with Maven](https://github.com/zhonghuitech/multi-tenant/actions/workflows/maven.yml/badge.svg)](https://github.com/zhonghuitech/multi-tenant/actions/workflows/maven.yml)
+
+Springboot 3 + Druid + MybatisPlus 多租户实现（共享表方案）。
 
 ## 准备工作
 先建数据库表，docker 建数据库表脚本在 `scripts/db`
