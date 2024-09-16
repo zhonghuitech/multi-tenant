@@ -5,7 +5,7 @@ spring:
     druid:
       # 主库数据源
       master:
-        url: jdbc:mysql://localhost:3306/mtenant?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
+        url: jdbc:mysql://localhost:3316/mtenant?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
         username: mtenantuser
         password: Mtenant@2049zhc!
       # 从库数据源

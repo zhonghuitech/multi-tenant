@@ -1,5 +1,6 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
 USE `mtenant`;
 
 drop table if exists `sys_user`;
@@ -8,7 +9,7 @@ CREATE TABLE `sys_user`
     `user_id`   bigint      NOT NULL AUTO_INCREMENT COMMENT '用户ID',
     `user_name` varchar(30) NOT NULL COMMENT '用户名',
     PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=Dynamic COMMENT='用户信息表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=Dynamic COMMENT='用户信息表';
 
 INSERT INTO `sys_user` (user_id, user_name)
 values (1, 'admin'),
@@ -25,7 +26,7 @@ CREATE TABLE `user_addr`
     PRIMARY KEY (`id`) USING BTREE,
     KEY         `idx_user_id` (`user_id`),
     KEY         `idx_tenant_id` (`tenant_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=Dynamic COMMENT='用户信息表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=Dynamic COMMENT='用户信息表';
 
 INSERT INTO `user_addr` (id, user_id, addr, tenant_id)
 values (1, 2, '中慧物联苏州', 'zhc'),
