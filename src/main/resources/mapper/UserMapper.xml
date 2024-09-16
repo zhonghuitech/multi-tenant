@@ -7,7 +7,7 @@
     </select>
 
     <select id="getAddrAndUser" resultType="com.zhonghuitech.multitenant.entity.User">
-        select a.addr, u.user_id, u.user_name, u.tenant_id
+        select u.user_id, u.user_name, u.tenant_id, a.addr
         from sys_user u
         left join user_addr a on u.user_id=a.user_id
         <where>

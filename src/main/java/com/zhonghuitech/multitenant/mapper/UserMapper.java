@@ -7,12 +7,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * <p>
- * MP 支持不需要 UserMapper.xml 这个模块演示内置 CRUD 咱们就不要 XML 部分了
- * </p>
  *
- * @author hubin
- * @since 2018-08-11
+ * @author aborn
+ * @since 2024-09-14
  */
 public interface UserMapper extends BaseMapper<User> {
 
@@ -22,8 +19,6 @@ public interface UserMapper extends BaseMapper<User> {
      * @return
      */
     Integer myCount();
-
-    List<User> getUserAndAddr(@Param("username") String username);
 
     List<User> getAddrAndUser(@Param("userName") String username);
 }

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
@@ -31,6 +32,7 @@ public class TenantTest {
     @Test
     void dSelect() {
         List<User> userList = mapper.selectList(null);
+        assertThat(!userList.isEmpty());
         userList.forEach(u -> Assertions.assertTrue(MybatisPlusConfig.tenantId.equals(u.getTenantId())));
     }
 
